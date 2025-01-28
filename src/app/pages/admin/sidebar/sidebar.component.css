@@ -1,0 +1,58 @@
+/* Container for the sidebar */
+.sidebar-container {
+    width: 20%; /* Sidebar width */
+    height: 100vh; /* Full viewport height */
+    position: absolute;
+    top: 64px;
+    left: 0;
+    background-color: #f4f4f4; /* Light gray background */
+    box-shadow: 0 6px 12px rgba(0, 128, 0, 0.4); /* Green box shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+  
+  /* Styling the sidebar card */
+  .sidebar-card {
+    width: 80%;
+    border-radius: 12px; /* Rounded corners */
+    padding: 16px;
+  }
+  
+  /* Header style for the sidebar */
+  .sidebar-header {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff; /* Blue color for the header */
+    margin-bottom: 12px;
+    padding: 0 16px;
+  }
+  
+  /* Sidebar items */
+  .sidebar-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333; /* Dark text color */
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+  }
+  
+  /* Sidebar item hover effect */
+  .sidebar-item:hover {
+    background-color: rgba(0, 128, 0, 0.1); /* Light green on hover */
+    color: #007bff; /* Blue text color on hover */
+  }
+  
+  /* Sidebar icons */
+  .sidebar-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Space between icon and text */
+  }
+  

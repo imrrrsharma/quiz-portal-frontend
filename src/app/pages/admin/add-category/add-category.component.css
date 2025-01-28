@@ -1,0 +1,75 @@
+/* Wrapper for the component */
+.category-wrapper {
+  width: 80%;
+  margin-left: 20%; /* To account for the sidebar */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Styling for the card container */
+.category-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 128, 0, 0.4); /* Green shadow */
+}
+
+/* Header styling */
+.category-header {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form container */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Label styling */
+.field-label {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Input and textarea styling */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+/* Input focus styling */
+.input-field:focus {
+  border-color: #007bff; /* Blue outline on focus */
+}
+
+/* Submit button */
+.btn-submit {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Submit button hover effect */
+.btn-submit:hover {
+  background-color: #0056b3;
+}

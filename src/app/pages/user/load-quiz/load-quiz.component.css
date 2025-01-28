@@ -1,0 +1,107 @@
+.bootstrap-wrapper{
+  width: 80%;
+  margin-left: 20%; /* To account for the sidebar */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Wrapper for quiz cards */
+.quiz-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header styling */
+.quiz-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.quiz-card-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.quiz-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0b1621;
+  margin-right: 10px;
+}
+
+.quiz-card-subtitle {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: whitesmoke;
+  margin-top: 4px;
+  background-color: #073461;
+  border-radius: 25%;
+  padding: 8px;
+}
+
+/* Content styling */
+.quiz-card-content {
+  margin-bottom: 16px;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Actions styling */
+.quiz-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.btn-accent {
+  background-color: #17a2b8;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn-accent:hover {
+  background-color: #138496;
+}
+
+.btn-label {
+  font-size: 14px;
+  color: #333;
+  margin-left: 10px;
+}
+
+/* No data card */
+.no-data-card {
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+}

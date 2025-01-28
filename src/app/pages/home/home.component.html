@@ -1,0 +1,88 @@
+<div class="bootstrap-wrapper">
+  <mat-card class="mat-elevation-z8">
+    <div class="image-container">
+      <img mat-card-image src="../../assets/home2.jpg" alt="Home Page Image">
+      <h1 id="typing-text">{{ displayText }}</h1>
+    </div>
+  </mat-card>
+
+  <!-- Categories Section -->
+  <div class="cards-container">
+    <mat-card
+      *ngFor="let c of categories"
+      class="category-card"
+      [routerLink]="'/user-dashboard/' + c.cid"
+      style="cursor: pointer;"
+    >
+      <mat-card-content>
+        <img src="../../assets/cat_card.jpg" alt="Category Image">
+        <h3 class="title">{{ c.title }}</h3>
+        <p class="description">{{ c.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div> 
+  
+  <div class="info-section">
+    <div class="info-content">
+      <h2>
+        Around {{totalUsers}} trusted registered users, with approximately {{ totalQuizzes }} quizzes attempted by them.
+      </h2>
+    </div>
+    <div class="info-image">
+      <img src="../../assets/quiz.jpg" alt="Quiz Image">
+    </div>
+  </div>
+
+  <div class="developer-card">
+    <h2>About the Developer</h2>
+    <div class="content">
+      <!-- Left Column -->
+      <div class="tags-column tags-left">
+        <div class="tag pink">Passionate Coder</div>
+        <div class="tag beige">Tech Enthusiast</div>
+        <div class="tag green">Full Stack Developer</div>
+      </div>
+  
+      <!-- Profile Section -->
+      <div class="profile-wrapper">
+        <img class="profile-image" src="../../assets/myimage.png" alt="Rajat Sharma">
+        <h3>Rajat Sharma</h3>
+        <div class="social-icons">
+          <a href="https://github.com/imrrrsharma" target="_blank">
+            <img src="../../assets/github.png" alt="GitHub">
+          </a>
+          <a href="https://www.linkedin.com/in/rajat-sharma-08200b16b/" target="_blank">
+            <img src="../../assets/linkedin.png" alt="LinkedIn">
+          </a>
+          <a href="https://www.instagram.com/imrrrsharma/" target="_blank">
+            <img src="../../assets/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://leetcode.com/u/imrrrsharma/" target="_blank">
+            <img src="../../assets/leetcode.png" alt="LeetCode">
+          </a>
+        </div>
+      </div>
+  
+      <!-- Right Column -->
+      <div class="tags-column tags-right">
+        <div class="tag blue">Built Scalable Systems</div>
+        <div class="tag purple">Innovator</div>
+        <div class="tag yellow">Problem Solver</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="about-website">
+    <h2>About Website</h2>
+    <p>
+      Welcome to Examportal, your one-stop solution for managing online quizzes and tests. Whether you are a teacher creating engaging quizzes or a student sharpening your skills, Examportal provides you with everything you need. Our platform is designed for simplicity and efficiency, ensuring a seamless experience for all users.
+    </p>
+    <p>
+      We believe in the power of learning and testing to drive personal growth. Explore our vast collection of quizzes, track your progress, and challenge yourself to learn more every day.
+    </p>
+    <footer>
+      &copy; All rights reserved. Examportal 2025
+    </footer>
+  </div>
+  
+</div>

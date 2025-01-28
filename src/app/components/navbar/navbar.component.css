@@ -1,0 +1,31 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-icon {
+  color: white;
+  margin: 35px 20px 30px 40px;
+}
+.custom-button {
+  color: white; /* White text color */
+  background-color: rgb(22 117 200); /* Button background color */
+  border: none; /* No border */
+  border-radius: 8px; /* Optional: rounded corners */
+  padding: 8px 16px; /* Optional: spacing for a better look */
+  font-weight: bold; /* Optional: bold text */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  margin-right: 20px; /* Optional: spacing between buttons */
+  outline: none; /* Removes outline when the button is focused */
+  font-size: large;
+}
+
+.custom-button:hover {
+  background-color: rgb(16, 39, 142); /* Slightly darker blue on hover */
+}
+
+.custom-button:focus {
+  outline: none; /* Ensures no outline is visible on focus */
+}
+
+

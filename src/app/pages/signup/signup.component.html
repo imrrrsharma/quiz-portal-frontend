@@ -1,0 +1,91 @@
+<div class="signup-wrapper">
+  <div class="signup-card">
+    <h1 class="text-center signup-header">User Registration</h1>
+
+    <form (ngSubmit)="formSubmit()" #registrationForm="ngForm">
+      <!-- First Name -->
+      <label for="firstName" class="field-label">First Name</label>
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        class="input-field"
+        [(ngModel)]="user.firstName"
+        placeholder="Enter your first name"
+        required
+      />
+
+      <!-- Last Name -->
+      <label for="lastName" class="field-label">Last Name</label>
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        class="input-field"
+        [(ngModel)]="user.lastName"
+        placeholder="Enter your last name"
+        required
+      />
+
+      <!-- Email -->
+      <label for="email" class="field-label">Email</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        class="input-field"
+        [(ngModel)]="user.email"
+        placeholder="Enter your email"
+        required
+      />
+
+      <!-- Username -->
+      <label for="username" class="field-label">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        class="input-field"
+        [(ngModel)]="user.username"
+        placeholder="Enter your username"
+        required
+      />
+
+      <!-- Password -->
+      <label for="password" class="field-label">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        class="input-field"
+        [(ngModel)]="user.password"
+        placeholder="Enter your password"
+        required
+      />
+
+      <!-- Phone -->
+      <label for="phone" class="field-label">Phone</label>
+      <input
+        id="phone"
+        name="phone"
+        type="tel"
+        maxlength="10"
+        class="input-field"
+        [(ngModel)]="user.phone"
+        placeholder="Enter your phone number"
+        required
+      />
+
+      <!-- Register Button -->
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary">Register</button>
+      </div>
+
+      <!-- Already Have an Account Section -->
+      <div class="text-center mt-3">
+        <span class="register-text">Already have an account?</span>
+        <a routerLink="/login" class="btn-link">Login</a>
+      </div>
+    </form>
+  </div>
+</div>

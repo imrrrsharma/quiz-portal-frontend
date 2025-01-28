@@ -1,0 +1,89 @@
+.bootstrap-wrapper{
+    width: 80%;
+    margin-left: 20%; /* To account for the sidebar */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Instructions Card */
+.instructions-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+    padding: 24px;
+    margin-top: 20px;
+  }
+  
+  /* Header */
+  .instructions-header {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .instructions-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .instructions-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-top: 8px;
+  }
+  
+  /* Content */
+  .instructions-content {
+    padding: 16px;
+  }
+  
+  .quiz-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .quiz-description {
+    font-size: 16px;
+    margin-top: 8px;
+    color: #555;
+  }
+  
+  .divider {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 16px 0;
+  }
+  
+  .section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  
+  .instructions-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .instructions-list li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  /* Actions */
+  .instructions-actions {
+    text-align: center;
+    margin-top: 16px;
+  }
+  
+  .start-quiz-btn {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  

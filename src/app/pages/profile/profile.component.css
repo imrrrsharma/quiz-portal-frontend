@@ -1,0 +1,100 @@
+/* Wrapper Styles */
+.wrapper {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin-left: 20%; /* To account for the sidebar */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Profile Image */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 4px solid #6c757d;
+}
+
+/* Table Styles */
+.table {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  width:100%;
+}
+
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.table-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+/* Badge Styles */
+.badge {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.badge-success {
+  background-color: #28a745;
+}
+
+.badge-danger {
+  background-color: #dc3545;
+}
+
+/* Margins and Spacing */
+.mt20 {
+  margin-top: 20px;
+}
+
+.me-3 {
+  margin-right: 16px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-outline-primary {
+  background-color: #fff;
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #a3ff81;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background-color: #19a20f;
+}

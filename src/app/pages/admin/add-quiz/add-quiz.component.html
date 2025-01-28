@@ -1,0 +1,94 @@
+<div class="quiz-wrapper">
+  <div class="quiz-card">
+    <h1 class="quiz-header">Add New Quiz</h1>
+
+    <div class="form-container">
+      <form (ngSubmit)="addQuiz()">
+        <!-- Title -->
+        <label for="title" class="field-label">Title</label>
+        <input
+          id="title"
+          name="title"
+          type="text"
+          class="input-field"
+          placeholder="Enter Quiz Title"
+          [(ngModel)]="quizData.title"
+          required
+        />
+
+        <!-- Description -->
+        <label for="description" class="field-label">Description</label>
+        <textarea
+          id="description"
+          name="description"
+          class="input-field"
+          placeholder="Enter Quiz Description"
+          [(ngModel)]="quizData.description"
+          rows="5"
+          required
+        ></textarea>
+
+        <div class="row">
+          <div class="col-md-6">
+            <!-- Maximum Marks -->
+            <label for="maxMarks" class="field-label">Maximum Marks</label>
+            <input
+              id="maxMarks"
+              name="maxMarks"
+              type="text"
+              class="input-field"
+              placeholder="Enter Maximum Marks"
+              [(ngModel)]="quizData.maxMarks"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <!-- Number of Questions -->
+            <label for="numberOfQuestions" class="field-label">Number of Questions</label>
+            <input
+              id="numberOfQuestions"
+              name="numberOfQuestions"
+              type="text"
+              class="input-field"
+              placeholder="Enter Number of Questions"
+              [(ngModel)]="quizData.numberOfQuestions"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Publish Status -->
+        <label for="active" class="field-label">Publish Status</label>
+        <div class="toggle-container">
+          <input
+            type="checkbox"
+            id="active"
+            name="active"
+            class="toggle-input"
+            [(ngModel)]="quizData.active"
+          />
+          <span class="toggle-label">Active</span>
+        </div>
+
+        <!-- Categories -->
+        <label for="category" class="field-label">Categories</label>
+        <select
+          id="category"
+          name="category"
+          class="input-field"
+          [(ngModel)]="quizData.category.cid"
+          required
+        >
+          <option *ngFor="let c of categories" [value]="c.cid">
+            {{ c.title }}
+          </option>
+        </select>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="submit" class="btn-submit">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

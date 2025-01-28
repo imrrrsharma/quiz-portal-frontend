@@ -1,0 +1,141 @@
+.bootstrap-wrapper{
+    width: 80%;
+    margin: 5%; /* To account for the sidebar */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* General Wrapper */
+.quiz-wrapper {
+    padding: 20px 0;
+  }
+  
+  /* Quiz Heading */
+  .quiz-heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  /* Question Card */
+  .question-card {
+    background-color: #fff;
+    border-radius: 22px;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+    padding: 24px;
+    margin-bottom: 30px;
+    margin: 2%;
+  }
+  
+  .question-content p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .question-text {
+    margin-left: 10px;
+    color: #555;
+  }
+  
+  .options-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
+  .option-col {
+    flex: 1;
+    padding-right: 16px;
+  }
+  
+  .option-col input {
+    margin-right: 8px;
+  }
+  
+  /* Submit Section */
+  .submit-section {
+    margin-top: 20px;
+  }
+  
+  .submit-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  
+  /* Timer Card */
+  .timer-card {
+    background-color: #fff;
+    border-radius: 22px;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    margin: 2%;
+  }
+  
+  .timer-header p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .timer-display {
+    font-size: 24px;
+    color: #007bff;
+    margin: 16px 0;
+  }
+  
+  /* Result Card */
+  .result-card {
+    background-color: #fff;
+    border-radius: 22px;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+    padding: 20px;
+    margin: 2%;
+  }
+  
+  .result-header h1 {
+    font-size: 24px;
+    color: #007bff;
+    text-align: center;
+  }
+  
+  .result-content h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  
+  .result-actions .action-btn {
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+
+  .submit-btn {
+    color: #fff;
+    background-color: #4d91da;
+  }
+
+  .submit-btn:hover {
+    background-color: #073f7a;
+  }
+  
+  .correct-option {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .wrong-option {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .correct-answer {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #28a745;
+  }

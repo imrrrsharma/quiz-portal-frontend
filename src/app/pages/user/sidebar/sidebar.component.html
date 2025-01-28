@@ -1,0 +1,39 @@
+<div class="sidebar-container">
+  <div class="sidebar-card">
+    <div class="sidebar-header">Available Categories</div>
+
+    <!-- Profile -->
+    <a class="sidebar-item" routerLink="/user-dashboard/profile">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png"
+        alt="Profile Icon"
+        class="sidebar-icon"
+      />
+      Profile
+    </a>
+
+    <!-- All Quizzes -->
+    <a class="sidebar-item" routerLink="/user-dashboard/0">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2983/2983795.png"
+        alt="Quiz Icon"
+        class="sidebar-icon"
+      />
+      All Quizzes
+    </a>
+
+    <!-- Dynamic Categories -->
+    <a
+      class="sidebar-item"
+      *ngFor="let c of categories"
+      [routerLink]="'/user-dashboard/' + c.cid"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/1828/1828742.png"
+        alt="Category Icon"
+        class="sidebar-icon"
+      />
+      {{ c.title }}
+    </a>
+  </div>
+</div>

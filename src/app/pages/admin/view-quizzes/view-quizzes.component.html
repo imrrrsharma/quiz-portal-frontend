@@ -1,0 +1,47 @@
+<div class="quiz-card-container" *ngFor="let q of quizzes">
+  <div class="quiz-card">
+    <div class="quiz-card-header">
+      <div class="avatar"></div>
+      <div class="quiz-header-info">
+        <h2 class="quiz-title">{{ q.title }}</h2>
+        <p class="quiz-category">{{ q.category.title }}</p>
+      </div>
+    </div>
+    <div class="quiz-card-content">
+      <p>{{ q.description }}</p>
+    </div>
+    <div class="quiz-card-actions">
+      <button
+        [routerLink]="'/admin/view-questions/' + q.qid + '/' + q.title"
+        class="btn btn-primary"
+      >
+        Questions
+      </button>
+      <button class="btn btn-outline-primary">
+        Max Marks: {{ q.maxMarks }}
+      </button>
+      <button class="btn btn-outline-primary">
+        Questions: {{ q.numberOfQuestions }}
+      </button>
+      <button
+        [routerLink]="'/admin/quiz/' + q.qid"
+        class="btn btn-primary"
+      >
+        Update
+      </button>
+      <button class="btn btn-primary">Attempts</button>
+      <button
+        class="btn btn-danger"
+        (click)="deleteQuiz(q.qid)"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="add-quiz-button text-center">
+  <button routerLink="/admin/add-quiz" class="btn btn-primary">
+    Add New Quiz
+  </button>
+</div>

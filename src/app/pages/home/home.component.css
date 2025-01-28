@@ -1,0 +1,295 @@
+/* Ensure the mat-card and its contents span the full width */
+mat-card {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+  }
+  
+  #typing-text {
+    width: 80%; /* Limit text width to 80% of the parent */
+    position: absolute;
+    top: 30%; /* Position text 30% from the top of the image */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 70px; /* Large text for desktop */
+    font-weight: bold;
+    color: rgb(124, 211, 233);
+    text-shadow: 2px 2px 4px rgba(18, 100, 159, 0.635);
+    white-space: normal; /* Allow text to wrap */
+    overflow: visible; /* Prevent text overflow */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    text-align: center; /* Center-align multiline text */
+    border-right: 2px solid white; /* Blinking cursor effect */
+    animation: blink 0.7s step-end infinite alternate;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Adjust height dynamically based on the content */
+    /* padding-top: 5%; Add padding to prevent text clipping */
+  }
+  
+  img[mat-card-image] {
+    width: 100%; /* Ensure the image spans the full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove gaps caused by inline-block */
+  }
+  
+  
+  .mat-card-actions {
+    margin-top: 20px; /* Space between image and button */
+  }
+  
+  @keyframes blink {
+    from {
+      border-right-color: white;
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
+
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px; /* Space between cards */
+    padding: 10px;
+  }
+  
+  .category-card {
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2); /* Light green shadow */
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensure content stays within the card */
+  }
+  
+  .category-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 128, 0, 0.4); /* Slightly deeper shadow */
+  }
+  
+  .category-card img {
+    width: 100%; /* Full width image */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure consistent cropping */
+    height: 210px;
+  }
+  
+  .category-card .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #023020; /* Dark green title color */
+  }
+  
+  .category-card .description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .cards-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cards-container {
+      grid-template-columns: 1fr; /* Single card per row for small screens */
+    }
+  }
+
+  .info-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8b54d2; /* Light purple to match the existing style */
+    padding: 0px 20px;
+    margin-top: 20px; /* Spacing between sections */
+  }
+  
+  .info-content {
+    flex: 1;
+    padding-right: 20px; /* Space between text and image */
+    text-align: left;
+    font-size: 50px;
+    color: white; /* Neutral text color */
+    line-height: 40px;
+  }
+  
+  .info-content h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 10px;
+    color: white; /* Dark green for emphasis */
+    line-height: 40px;
+  }
+  
+  .info-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .info-image img {
+    max-width: 110%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for the image */
+  }
+
+  .developer-card {
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2); /* Light green shadow */
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative; /* Allows independent positioning */
+    margin: 10px;
+  }
+  
+  .developer-card h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #666;
+  }
+
+  .developer-card h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+  
+  .tags-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px; /* Matches image height */
+  }
+  
+  .tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    border-radius: 12px;
+    text-align: center;
+  }
+    
+  .pink {
+    background-color: #d46a75; /* Slightly darker */
+  }
+  
+  .beige {
+    background-color: #bca66e; /* Slightly darker */
+  }
+  
+  .green {
+    background-color: #89cba2; /* Slightly darker */
+  }
+  
+  .blue {
+    background-color: #6d90d4; /* Slightly darker */
+  }
+  
+  .purple {
+    background-color: #a875d4; /* Slightly darker */
+  }
+  
+  .yellow {
+    background-color: #c7b56e; /* Slightly darker */
+  }
+  
+  .profile-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+  }
+  
+  .profile h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.2);
+  }
+  
+  .about-website {
+    background-color: #333333; /* Dark background for contrast */
+    color: #ffffff; /* White text for readability */
+    padding: 20px 40px; /* Spacing inside the section */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin-top: 20px; /* Space above the section */
+    font-family: Arial, sans-serif; /* Clean font */
+  }
+  
+  .about-website h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .about-website p {
+    font-size: 16px;
+    line-height: 1.6; /* Better text spacing for readability */
+    margin-bottom: 20px;
+  }
+  
+  .about-website footer {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 20px;
+    color: #bbbbbb; /* Slightly lighter text for footer */
+  }
+  
+  
+  
+  

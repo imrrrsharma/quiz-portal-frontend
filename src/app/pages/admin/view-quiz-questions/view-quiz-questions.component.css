@@ -1,0 +1,82 @@
+.bootstrap-wrapper {
+    width: 80%;
+    margin-left: 20%; /* To account for the sidebar */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Question Card */
+.question-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 128, 0, 0.4); /* Green shadow */
+    margin-bottom: 20px;
+  }
+  
+  /* Question Content */
+  .question-content {
+    margin-bottom: 15px;
+  }
+  
+  /* Action Buttons */
+  .question-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  .question-actions .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
+  
+  /* Divider */
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+  }
+  
+  /* Responsive Margin */
+  .ml10 {
+    margin-left: 10px;
+  }
+  
+  .ml20 {
+    margin-left: 20px;
+  }
+  
+  .mt20 {
+    margin-top: 20px;
+  }
+
+  /* Buttons */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .btn-danger:hover {
+    background-color: #b02a37;
+  }
+  

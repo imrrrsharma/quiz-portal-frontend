@@ -1,0 +1,73 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="instructions-card">
+          <div class="instructions-header">
+            <h1 class="instructions-title">
+              Read the instructions of this page carefully
+            </h1>
+            <h2 class="instructions-subtitle">One step more to go</h2>
+          </div>
+
+          <div class="instructions-content">
+            <!-- Quiz Title and Description -->
+            <h1 class="quiz-title">{{ quiz.title }}</h1>
+            <p class="quiz-description">{{ quiz.description }}</p>
+
+            <hr class="divider" />
+            <h2 class="section-title">Important Instructions</h2>
+            <ul class="instructions-list">
+              <li>This quiz is only for practice purposes.</li>
+              <li>
+                You have to submit the quiz within
+                <b>{{ quiz.numberOfQuestions * 2 }} minutes</b>.
+              </li>
+              <li>You can attempt the quiz any number of times.</li>
+              <li>
+                There are <b>{{ quiz.numberOfQuestions }} questions</b> in this
+                quiz.
+              </li>
+              <li>
+                Each question carries
+                <b>{{ quiz.maxMarks / quiz.numberOfQuestions }} marks</b>. No
+                negative marking for wrong answers.
+              </li>
+              <li>All questions are of MCQ type.</li>
+            </ul>
+
+            <hr class="divider" />
+            <h2 class="section-title">Attempting Quiz</h2>
+            <ul class="instructions-list">
+              <li>Click <b>Start Quiz</b> button to start the quiz.</li>
+              <li>
+                The timer will start the moment you click the <b>Start Test</b>
+                button.
+              </li>
+              <li>
+                You cannot resume this quiz if interrupted for any reason.
+              </li>
+              <li>Scroll down to move to the next question.</li>
+              <li>Click on the <b>Submit Quiz</b> button to complete the quiz.</li>
+              <li>
+                A report of the test will be automatically generated as a PDF
+                copy.
+              </li>
+            </ul>
+          </div>
+
+          <div class="instructions-actions">
+            <button
+              (click)="startQuiz()"
+              class="start-quiz-btn"
+              mat-raised-button
+              color="primary"
+            >
+              Start Quiz
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

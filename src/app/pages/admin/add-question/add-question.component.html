@@ -1,0 +1,123 @@
+<div class="bootstrap-wrapper">
+  <div class="row mt20">
+    <div class="col-md-12">
+      <h1>
+        Add Question to <span class="bold">{{ qTitle }}</span>
+      </h1>
+
+      <div class="question-card">
+        <div class="question-card-header">
+          <p class="subtitle">Enter the details of the new question</p>
+        </div>
+        <div class="question-card-content">
+          <form class="mt20" (submit)="formSubmit()">
+            <!-- Content Field -->
+            <label for="content" class="field-label">Question Content: </label>
+            <textarea
+                required
+                [(ngModel)]="question.content"
+                id="content"
+                name="content"
+                type="text"
+                class="input-field"
+                rows="10"
+                placeholder="Enter Question Description"
+              ></textarea>
+
+
+            <!-- Options -->
+            <div class="row">
+              <div class="col-md-6">
+                <label for="option1" class="field-label">Enter Option 1</label>
+                <input
+                  required
+                  [(ngModel)]="question.option1"
+                  id="option1"
+                  name="option1"
+                  type="text"
+                  class="input-field"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="option2" class="field-label">Enter Option 2</label>
+                <input
+                  required
+                  [(ngModel)]="question.option2"
+                  id="option2"
+                  name="option2"
+                  type="text"
+                  class="input-field"
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <label for="option3" class="field-label">Enter Option 3</label>
+                <input
+                  required
+                  [(ngModel)]="question.option3"
+                  id="option3"
+                  name="option3"
+                  type="text"
+                  class="input-field"
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="option4" class="field-label">Enter Option 4</label>
+                <input
+                  required
+                  [(ngModel)]="question.option4"
+                  id="option4"
+                  name="option4"
+                  type="text"
+                  class="input-field"
+                />
+              </div>
+            </div>
+
+            <!-- Answer -->
+            <label for="answer" class="field-label">Select Answer</label>
+            <select
+              id="answer"
+              name="answer"
+              class="input-field"
+              required
+              [(ngModel)]="question.answer"
+            >
+              <option
+                *ngIf="question.option1"
+                [value]="question.option1"
+              >
+                {{ question.option1 }}
+              </option>
+              <option
+                *ngIf="question.option2"
+                [value]="question.option2"
+              >
+                {{ question.option2 }}
+              </option>
+              <option
+                *ngIf="question.option3"
+                [value]="question.option3"
+              >
+                {{ question.option3 }}
+              </option>
+              <option
+                *ngIf="question.option4"
+                [value]="question.option4"
+              >
+                {{ question.option4 }}
+              </option>
+            </select>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+              <button type="submit" class="btn-submit">Add</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

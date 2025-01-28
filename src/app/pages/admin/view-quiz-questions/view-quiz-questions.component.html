@@ -1,0 +1,58 @@
+
+
+<div class="bootstrap-wrapper">
+  <h1 class="mt20">Questions of {{ qTitle }}</h1>
+  <div class="row">
+    <div class="col-md-12">
+
+      <div class="question-card mt20" *ngFor="let q of questions; let i = index">
+        <div class="question-content">
+          <p>
+            <b> Q {{ i + 1 }})</b>
+            <span class="ml20" [innerHTML]="q.content"></span>
+          </p>
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6">
+                <p><b>1)</b> {{ q.option1 }}</p>
+              </div>
+              <div class="col-md-6">
+                <p><b>2)</b> {{ q.option2 }}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><b>3)</b> {{ q.option3 }}</p>
+              </div>
+              <div class="col-md-6">
+                <p><b>4)</b> {{ q.option4 }}</p>
+              </div>
+            </div>
+
+            <hr class="mt20" />
+            <p class="mt20"><b>Correct Answer:</b> {{ q.answer }}</p>
+          </div>
+        </div>
+
+        <div class="question-actions">
+          <button
+            class="btn btn-danger"
+            (click)="deleteQuestion(q.quesId)"
+          >
+            Delete
+          </button>
+          <button class="btn btn-primary ml10">Update</button>
+        </div>
+      </div>
+      <div class="container text-center">
+        <button
+          class="btn btn-primary"
+          [routerLink]="'/admin/add-question/' + qId + '/' + qTitle"
+        >
+          Add Question
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

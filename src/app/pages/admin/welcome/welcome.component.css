@@ -1,0 +1,6 @@
+.wrapper{
+    width: 80%;
+    margin-left: 20%; /* To account for the sidebar */
+    padding: 20px;
+    box-sizing: border-box;
+}

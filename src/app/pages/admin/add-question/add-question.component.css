@@ -1,0 +1,87 @@
+/* Container Styling */
+.bootstrap-wrapper {
+  width: 80%;
+    margin-left: 20%; /* To account for the sidebar */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Bold Text */
+.bold {
+  font-weight: bold;
+}
+
+/* Question Card */
+.question-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 128, 0, 0.4); /* Green shadow */
+  margin-top: 20px;
+}
+
+/* Card Header */
+.question-card-header .subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Field Label Styling */
+.field-label {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Input Field Styling */
+.input-field {
+  width: 95%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+}
+
+/* Submit Button Styling */
+.btn-submit {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+/* CKEditor Container */
+.ckeditor-container {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  transition: border-color 0.3s;
+}
+
+.ckeditor-container:focus-within {
+  border-color: #007bff; /* Blue outline on focus */
+}
+

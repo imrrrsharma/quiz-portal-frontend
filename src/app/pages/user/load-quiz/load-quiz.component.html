@@ -1,0 +1,38 @@
+<div class="bootstrap-wrapper">
+  <div class="container-fluid">
+    <h1 class="mt20">Available Quizzes</h1>
+
+    <div class="row mt20" *ngIf="quizzes">
+      <!-- Loop through quizzes -->
+      <div class="col-md-4" *ngFor="let q of quizzes">
+        <div class="quiz-card">
+          <div class="quiz-card-header">
+            <div class="quiz-card-avatar"></div>
+            <div class="quiz-card-title">{{ q.title     }}</div>
+            <div class="quiz-card-subtitle">{{ q.category.title }}</div>
+          </div>
+          <div class="quiz-card-content">
+            <p class="truncate">{{ q.description }}</p>
+          </div>
+          <div class="quiz-card-actions">
+            <a
+              class="btn btn-accent ml10"
+              [routerLink]="'/user-dashboard/instructions/' + q.qid"
+            >
+              Start
+            </a>
+            <span class="btn-label">Tot. Questions: {{ q.numberOfQuestions }}</span>
+            <span class="btn-label">Max. Marks: {{ q.maxMarks }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- If no quizzes available -->
+      <div class="col-md-12" *ngIf="quizzes.length == 0">
+        <div class="no-data-card">
+          <h1>No data in this category</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<div *ngIf="user" class="wrapper card p-4 shadow">
+  <h1 class="text-center">Your Profile Details</h1>
+
+  <div class="bootstrap-wrapper">
+    <div class="container text-center">
+      <img
+        src="https://t4.ftcdn.net/jpg/03/46/93/61/360_F_346936114_RaxE6OQogebgAWTalE1myseY1Hbb5qPM.jpg"
+        alt="Profile Image"
+        class="profile-image rounded-circle shadow-sm mb-3"
+      />
+
+      <h2 class="mt20">{{ user.firstName }} {{ user.lastName }}</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <!-- Profile Details Table -->
+        <table class="table table-bordered table-striped text-center mt20">
+          <thead class="table-dark">
+            <tr>
+              <th>Field</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Username</strong></td>
+              <td>{{ user.username }}</td>
+            </tr>
+            <tr>
+              <td><strong>User ID</strong></td>
+              <td>EXAM{{ user.id }}</td>
+            </tr>
+            <tr>
+              <td><strong>Phone</strong></td>
+              <td>{{ user.phone }}</td>
+            </tr>
+            <tr>
+              <td><strong>Role</strong></td>
+              <td>{{ user.authorities[0].authority }}</td>
+            </tr>
+            <tr>
+              <td><strong>Status</strong></td>
+              <td>
+                <span
+                  class="badge"
+                  [ngClass]="{
+                    'badge-success': user.enabled,
+                    'badge-danger': !user.enabled
+                  }"
+                >
+                  {{ user.enabled ? "ACTIVE" : "NOT ACTIVE" }}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt20">
+    <button class="btn btn-primary me-3">Update</button>
+    <button class="btn btn-success">Share</button>
+  </div>
+</div>

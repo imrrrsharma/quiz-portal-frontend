@@ -1,0 +1,21 @@
+   
+   
+<div class="category-wrapper">
+  <div class="category-card">
+    <h1 class="category-header">All Categories</h1>
+      <div class="cards-container">
+        <mat-card *ngFor="let c of categories" class="category-card">
+          <mat-card-content>
+            <h3 class="title">{{ c.title }}</h3>
+            <p class="description">{{ c.description }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div> 
+
+      <div class="text-center">
+        <button routerLink="/admin/add-category" class="btn-submit">
+          Add New Category
+        </button>
+      </div>
+  </div>
+</div>

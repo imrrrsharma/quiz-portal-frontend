@@ -1,0 +1,212 @@
+<div class="quiz-wrapper" *ngIf="!isSubmit">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Spacer for layout symmetry -->
+      <div class="col-md-2"></div>
+
+      <!-- Questions Section -->
+      <div class="col-md-8">
+        <ng-container *ngIf="questions">
+          <h1 class="quiz-heading">
+            Attempting <b>{{ questions[0].quiz.title }}</b>
+          </h1>
+        </ng-container>
+
+        <div *ngFor="let q of questions; let i = index" class="question-card">
+          <div class="question-content">
+            <p>
+              <b>Q {{ i + 1 }})</b>
+              <span class="question-text" [innerHTML]="q.content"></span>
+            </p>
+
+            <hr class="divider" />
+
+             <!-- Options -->
+             <div class="option-row">
+              <input
+                type="radio"
+                [value]="q.option1"
+                [name]="q.option1"
+                [(ngModel)]="q.givenAnswer"
+              />
+              {{ q.option1 }}
+            </div>
+            <div class="option-row">
+              <input
+                type="radio"
+                [value]="q.option2"
+                [name]="q.option2"
+                [(ngModel)]="q.givenAnswer"
+              />
+              {{ q.option2 }}
+            </div>
+            <div class="option-row">
+              <input
+                type="radio"
+                [value]="q.option3"
+                [name]="q.option3"
+                [(ngModel)]="q.givenAnswer"
+              />
+              {{ q.option3 }}
+            </div>
+            <div class="option-row">
+              <input
+                type="radio"
+                [value]="q.option4"
+                [name]="q.option4"
+                [(ngModel)]="q.givenAnswer"
+              />
+              {{ q.option4 }}
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Submit Button -->
+        <div class="submit-section text-center">
+          <button
+            (click)="submitQuiz()"
+            class="submit-btn"
+            mat-raised-button
+            color="primary"
+          >
+            Submit Quiz
+          </button>
+        </div>
+      </div>
+
+      <!-- Timer Section -->
+      <div class="col-md-2">
+        <div class="timer-card">
+          <div class="timer-header">
+            <p>Quiz will automatically submit in</p>
+          </div>
+          <div class="timer-content">
+            <h1 class="timer-display">{{ getFormattedTime() }}</h1>
+            <mat-spinner
+              mode="determinate"
+              color="accent"
+              [value]="(timer / (questions.length * 2 * 60)) * 100"
+            ></mat-spinner>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Result Section -->
+<div class="quiz-wrapper" *ngIf="isSubmit">
+  <div class="row mt20">
+    <div class="col-md-6 offset-md-3">
+      <div class="result-card">
+        <div class="result-header">
+          <h1>Quiz Result</h1>
+        </div>
+        <div class="result-content text-center">
+          <h2>Marks Got: {{ marksGot }}</h2>
+          <h2>Correct Answers: {{ correctAnswers }}</h2>
+          <h2>Questions Attempted: {{ attempted }}</h2>
+        </div>
+        <div class="result-actions text-center">
+          <button class="action-btn" mat-raised-button color="primary" (click)="print();">
+            Print
+          </button>
+          <button
+            class="action-btn"
+            mat-raised-button
+            color="accent"
+            routerLink="/"
+          >
+            Home
+          </button>
+        </div>
+      </div>
+    </div>
+
+      <!--to generate the report -->
+      <div *ngFor="let q of questions; let i = index" class="question-card">
+        <div class="question-content">
+          <p>
+            <b>Q {{ i + 1 }})</b>
+            <span class="question-text" [innerHTML]="q.content"></span>
+          </p>
+      
+          <hr class="divider" />
+      
+          <!-- Options -->
+          <div
+            class="option-row"
+            [ngClass]="{
+              'correct-option': q.givenAnswer === q.option1 && q.option1 === getCorrectAnswer(q.content),
+              'wrong-option': q.givenAnswer === q.option1 && q.option1 !== getCorrectAnswer(q.content)
+            }"
+          >
+            <input
+              type="radio"
+              [value]="q.option1"
+              [name]="'option-' + i"
+              disabled
+              [checked]="q.givenAnswer === q.option1"
+            />
+            {{ q.option1 }}
+          </div>
+          <div
+            class="option-row"
+            [ngClass]="{
+              'correct-option': q.givenAnswer === q.option2 && q.option2 === getCorrectAnswer(q.content),
+              'wrong-option': q.givenAnswer === q.option2 && q.option2 !== getCorrectAnswer(q.content)
+            }"
+          >
+            <input
+              type="radio"
+              [value]="q.option2"
+              [name]="'option-' + i"
+              disabled
+              [checked]="q.givenAnswer === q.option2"
+            />
+            {{ q.option2 }}
+          </div>
+          <div
+            class="option-row"
+            [ngClass]="{
+              'correct-option': q.givenAnswer === q.option3 && q.option3 === getCorrectAnswer(q.content),
+              'wrong-option': q.givenAnswer === q.option3 && q.option3 !== getCorrectAnswer(q.content)
+            }"
+          >
+            <input
+              type="radio"
+              [value]="q.option3"
+              [name]="'option-' + i"
+              disabled
+              [checked]="q.givenAnswer === q.option3"
+            />
+            {{ q.option3 }}
+          </div>
+          <div
+            class="option-row"
+            [ngClass]="{
+              'correct-option': q.givenAnswer === q.option4 && q.option4 === getCorrectAnswer(q.content),
+              'wrong-option': q.givenAnswer === q.option4 && q.option4 !== getCorrectAnswer(q.content)
+            }"
+          >
+            <input
+              type="radio"
+              [value]="q.option4"
+              [name]="'option-' + i"
+              disabled
+              [checked]="q.givenAnswer === q.option4"
+            />
+            {{ q.option4 }}
+          </div>
+      
+          <!-- Correct Answer Display -->
+          <div class="correct-answer">
+            Correct Answer: <b>{{ getCorrectAnswer(q.content) }}</b>
+          </div>
+        </div>
+      </div>
+      
+    
+  </div>
+</div>

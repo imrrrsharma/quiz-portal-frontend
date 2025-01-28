@@ -1,0 +1,114 @@
+/* Wrapper for the entire list of quiz cards */
+.quiz-card-container {
+  width: 80%;
+  margin-left: 20%; /* To account for the sidebar */
+  padding: 20px;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+/* Quiz card styling */
+.quiz-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 128, 0, 0.4); /* Green shadow */
+  margin-bottom: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Header styling */
+.quiz-card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Avatar styling */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin-right: 15px;
+}
+
+/* Title and category styling */
+.quiz-header-info {
+  flex: 1;
+}
+
+.quiz-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.quiz-category {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+/* Content styling */
+.quiz-card-content {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Actions container */
+.quiz-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-outline-primary {
+  background-color: #fff;
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: #b02a37;
+}
+
+/* Add quiz button container */
+.add-quiz-button {
+  margin-top: 20px;
+}
+
+.add-quiz-button .btn {
+  padding: 12px 20px;
+  font-size: 16px;
+}
