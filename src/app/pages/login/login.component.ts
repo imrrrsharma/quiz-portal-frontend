@@ -98,6 +98,10 @@ export class LoginComponent implements OnInit {
     );
   }
 
+  routeToRegister(){
+    this.router.navigate(['/signup'])
+  }
+
   onReset() {
     this.loginData.username = '';
     this.loginData.password = '';
