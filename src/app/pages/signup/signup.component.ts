@@ -104,6 +104,10 @@ export class SignupComponent implements OnInit {
       );
     }
   }
+
+  routeToLogin(){
+    this.router.navigate(['/login']);
+  }
   
 
   onClear() {
