@@ -1,31 +1,51 @@
-# Examfront
+Quiz Portal - https://quizzing-site.netlify.app/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
+Quiz Portal is a fully functional website where users can test their knowledge by participating in quizzes. The system supports two roles: Admin and Normal User, with distinct functionalities for each.
 
-## Development server
+Functionalities
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Normal User:-
 
-## Code scaffolding
+1. Register on the Platform
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+   New users can register themselves to access the platform's features.
 
-## Build
+2. Login and Token Generation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  After registering, users can log in to generate a token for authentication. This token will allow them to access all other functionalities.
 
-## Running unit tests
+3. Browse and Attempt Quizzes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Normal users can:
 
-## Running end-to-end tests
+• Select a category from the available list.
+• Choose a quiz within the selected category.
+• Attempt the quiz and view results.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Admin User:-
 
-## Further help
+Admins have advanced capabilities to manage the platform.
+They can:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Manage Categories
+   • Add, update, or delete quiz categories.
 
-To install older dependencies - npm install --legacy-peer-deps
-To ignore ssl - $env:NODE_OPTIONS = '--openssl-legacy-provider'
-Now, we can run this
+2. Manage Quizzes
+   • Add, update, or delete quizzes under specific categories.
+
+3. Manage Questions
+   • Configure quiz questions, including: • Adding or updating options. • Defining correct answers.
+
+
+Deployment :-
+
+The backend service is deployed and running at: https://quiz-portal-backend-production.up.railway.app/
+
+The frontend service is deployed on netlify - https://quizzing-site.netlify.app/
+
+How It Works :-
+
+Register: New users register themselves on the platform.
+Login: Generate a token to authenticate and access other features.
+Normal Users: Browse and attempt quizzes.
+Admins: Use a separate interface to manage the platform content.
